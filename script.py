@@ -74,3 +74,7 @@ categories = etl_catagories()
 fact = add_keys(fact, categories)
 countries = fact[["country_id","Country","continent"]]
 business = fact[["Business","year_founded","country_id","category_id"]]
+
+business.to_csv('business.csv', sep='\t', encoding='utf-8')
+countries.to_csv('countries.csv', sep='\t', encoding='utf-8')
+categories.to_csv('categories.csv', sep='\t', encoding='utf-8')
